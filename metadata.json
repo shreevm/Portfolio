@@ -1,0 +1,6 @@
+{
+  "name": "Shree Varaa Mangai V Portfolio",
+  "description": "Cinematic 3D stylized portfolio website and interactive resume showcase for Shree Varaa Mangai V.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
