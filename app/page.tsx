@@ -903,7 +903,7 @@ export default function Page() {
                     </div>
                   </div>
                   <a 
-                    href="https://drive.google.com/file/d/YOUR_RESUME_ID/view?usp=sharing"
+                    href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-1 px-3 text-[10px] font-mono rounded bg-white/5 border border-white/10 text-gray-400 hover:text-white transition-all hover:bg-orange-600/10"
