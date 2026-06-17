@@ -99,25 +99,25 @@ const DEFAULT_PROJECTS: Project[] = [
 const DEFAULT_EXPERIENCES: Experience[] = [
   {
     id: 'exp-1',
-    role: 'Machine Learning Engineering (Co-op)',
-    organization: 'University of Florida - IPPD & AGIS Inc',
+    role: 'Machine Learning Engineering Co-op',
+    organization: 'University of Florida-IPPD | AGIS Inc',
     period: 'AUG 2025 – APR 2026',
     bullets: [
-      'Developed an application for capturing video streams and images, reconstructing them into 3D assets, and integrating them into Unity for real-time visualization and interactive workflows.',
-      'Designed and implemented a training pipeline using 3D Gaussian Splatting (3DGS)/2DGS, COLMAP/GLOMAP, meshes, and point clouds to reconstruct detailed 3D representations from multi-view video and image data.',
-      'Accelerated large-scale 3D reconstruction and neural rendering pipelines using NVIDIA B200 GPU clusters and CUDA nightly builds to optimize training throughput and rendering performance.',
-      'Investigated tradeoffs between real-time and offline processing to optimize computational efficiency and scalability.'
+      'Built an end-to-end pipeline that captures video/image streams, reconstructs them into 3D assets using 2D Gaussian Splatting (2DGS), and integrates them into Unity for real-time interactive visualization.',
+      'Designed and trained neural reconstruction models (3DGS/2DGS, COLMAP/GLOMAP) on multi-view data to generate high-fidelity meshes and point clouds; selected 2DGS for its superior exportable mesh quality over 3DGS.',
+      'Accelerated large-scale reconstruction and rendering using NVIDIA B200 GPU clusters with CUDA nightly builds, significantly improving training throughput and pipeline scalability.',
+      'Investigated real-time vs. offline processing tradeoffs to optimize computational efficiency, reducing reconstruction latency and enabling practical deployment workflows.'
     ]
   },
   {
     id: 'exp-2',
     role: 'Machine Learning Researcher',
-    organization: 'Trustworthy Engineered Autonomy Lab',
+    organization: 'University of Florida-Trustworthy Engineered-Autonomy Lab',
     period: 'SEPT 2025 – APR 2026',
     bullets: [
-      'Conducted research on hallucination in text-to-video generative AI systems by generating videos with Wan 2.1 T2V 1.3B and HunyuanVideo using prompts from the T2V and VIBE benchmark datasets, and developing evaluation methods to quantify discrepancies between prompt semantics and generated video content.',
-      'Designed experiments to analyze hallucination emergence across different stages of the video generation pipeline, identifying object omissions, attribute mismatches, spatial relationship errors, and semantic drift.',
-      'Benchmarked hallucination detection performance using prompt-based assessments with Qwen3-VL and other vision-language models, evaluated performance with Balanced Accuracy, Macro F1-score, AUROC, and AUPRC.'
+      'Designed and executed experiments generating videos with Wan 2.1 T2V 1.3B and HunyuanVideo from T2VCompBench and ViBe benchmark prompts, systematically quantifying semantic discrepancies between prompts and generated content.',
+      'Developed a fine-grained hallucination taxonomy identifying object omissions, attribute mismatches, spatial relationship errors, and semantic drift across video generation stages.',
+      'Benchmarked automated hallucination detection using Qwen3-VL and other VLMs on severity-level classification; evaluated using Balanced Accuracy, Macro F1, AUROC, and AUPRC.'
     ]
   },
   {
@@ -126,21 +126,20 @@ const DEFAULT_EXPERIENCES: Experience[] = [
     organization: 'Ford Motor Company',
     period: 'AUG 2023 – OCT 2023',
     bullets: [
-      'Conducted research on time series forecasting models such as Autoregressive Integrated Moving Average (ARIMA), Vector Autoregression (VAR), and Vector Error Correction Model (VECM) and non-time series models like Lasso and Ridge regression to determine optimal female incumbency.',
-      'Developed Extract, Transform, and Load (ETL) pipelines in Python to predict salary costs, improve accuracy and aid in budget planning.',
-      'Improved model accuracy by 20% through Exploratory Data Analysis (EDA) and data wrangling, identifying and addressing outliers in the dataset.'
+      'Conducted statistical analysis and forecasting on time series forecasting models such as Autoregressive Integrated Moving Average (ARIMA), Vector Autoregression (VAR), and Vector Error Correction Model (VECM) and non-time series models, such as Lasso and Ridge regression, to determine optimal female incumbency.',
+      'Developed ETL pipelines in Python to predict salary costs using workforce datasets containing 1,000+ employee records, improving model accuracy by 20% through exploratory data analysis, feature engineering, and data quality improvements.',
+      'Applied statistical techniques to support HR strategy and workforce planning initiatives.'
     ]
   },
   {
     id: 'exp-4',
-    role: 'Software Engineer Intern (Remote)',
-    organization: 'SpaceScan Ltd',
+    role: 'Software Engineer Intern',
+    organization: 'Spacescan Ltd',
     period: 'SEPT 2022 – JAN 2023',
     bullets: [
-      'Developed responsive web interfaces using React.js, integrating REST APIs documented through Swagger/OpenAPI to enable seamless communication with backend services.',
-      'Collaborated with backend engineers to consume and validate API endpoints connected to PostgreSQL databases, improving data retrieval and user workflow efficiency.',
-      'Built reusable UI components and implemented state management patterns to enhance maintainability and scalability of the application.',
-      'Contributed to mobile application development using React Native, participating in feature implementation and frontend architecture discussions.'
+      'Built and maintained responsive web interfaces in React.js, integrating REST APIs documented with Swagger to enable seamless frontend-backend communication over PostgreSQL databases.',
+      'Developed reusable, scalable UI components with robust state management patterns, reducing code duplication and improving long-term maintainability of the application.',
+      'Contributed to the React Native mobile app, implementing new features and participating in frontend architecture discussions to ensure consistency across web and mobile platforms.'
     ]
   }
 ];
@@ -264,7 +263,7 @@ export default function Page() {
 
     // Track active scrolling sections
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'projects', 'skills', 'education', 'contact'];
+      const sections = ['hero', 'about', 'projects', 'skills', 'experience', 'education', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -350,6 +349,7 @@ export default function Page() {
               { id: 'about', label: 'About' },
               { id: 'projects', label: 'Projects' },
               { id: 'skills', label: 'Skills' },
+              { id: 'experience', label: 'Experience' },
               { id: 'education', label: 'Education' },
               { id: 'contact', label: 'Contact' }
             ].map(tab => (
@@ -590,6 +590,57 @@ export default function Page() {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </section>
+
+        {/* EXPERIENCE SECTION */}
+        <section id="experience" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 scroll-mt-20">
+          <div className="text-center md:text-left mb-16">
+            <div className="flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-3">
+              <Building2 size={14} />
+              <span>Professional Journey</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-sans font-black text-white tracking-tight mt-2 uppercase">
+              Work & Research
+            </h2>
+          </div>
+
+          <div className="space-y-6 max-w-4xl">
+            {experiences.map((exp, idx) => (
+              <motion.div
+                key={exp.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="relative rounded-xl border border-white/10 bg-white/[0.01] hover:border-orange-500/30 hover:bg-white/[0.02] transition-all p-6 md:p-8 group"
+              >
+                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-500/20 to-transparent" />
+                
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                      {exp.role}
+                    </h3>
+                    <p className="text-sm text-orange-400/80 font-mono mt-1">
+                      {exp.organization}
+                    </p>
+                  </div>
+                  <span className="text-xs font-mono text-gray-500 whitespace-nowrap pl-4">
+                    {exp.period}
+                  </span>
+                </div>
+
+                <ul className="space-y-2.5">
+                  {exp.bullets.map((bullet, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-gray-300 leading-relaxed">
+                      <span className="text-orange-400/60 flex-shrink-0 mt-1.5">▸</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -838,6 +889,27 @@ export default function Page() {
                     </div>
                   </div>
                   <div className="text-[10px] font-mono text-gray-500">Connected</div>
+                </div>
+
+                {/* Resume Card */}
+                <div className="group p-4 rounded-xl border border-white/5 bg-white/[0.01] hover:border-orange-500/30 transition-all flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-lg bg-orange-500/10 text-orange-400">
+                      <BookOpen size={16} />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-mono text-gray-500 uppercase">Resume / CV</p>
+                      <p className="text-sm font-mono text-white mt-0.5">Download Latest</p>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://drive.google.com/file/d/YOUR_RESUME_ID/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-1 px-3 text-[10px] font-mono rounded bg-white/5 border border-white/10 text-gray-400 hover:text-white transition-all hover:bg-orange-600/10"
+                  >
+                    View
+                  </a>
                 </div>
               </div>
             </div>
