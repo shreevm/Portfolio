@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Send, CheckCircle, Mail, User, BookOpen, MessageSquare } from 'lucide-react';
 
+const RECIPIENT_EMAIL = 'shreevaraamangai@gmail.com';
+
 export function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -31,30 +33,38 @@ export function ContactForm() {
     setIsSubmitting(true);
     setErrorMsg('');
 
-    // Simulate network submission delay
-    setTimeout(() => {
-      try {
-        // Retrieve and append to local inbox
-        const existingMessages = JSON.parse(localStorage.getItem('sv_inbox') || '[]');
-        const newMessage = {
-          id: Date.now().toString(),
-          ...formData,
-          dateMs: Date.now(),
-          read: false,
-        };
-        localStorage.setItem('sv_inbox', JSON.stringify([...existingMessages, newMessage]));
+    try {
+      // Keep a local browser copy for the admin dashboard preview.
+      const existingMessages = JSON.parse(localStorage.getItem('sv_inbox') || '[]');
+      const newMessage = {
+        id: Date.now().toString(),
+        ...formData,
+        dateMs: Date.now(),
+        read: false,
+      };
+      localStorage.setItem('sv_inbox', JSON.stringify([...existingMessages, newMessage]));
 
-        setIsSubmitting(false);
-        setIsSuccess(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
+      const emailSubject = formData.subject.trim() || `Portfolio message from ${formData.name}`;
+      const emailBody = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        '',
+        'Message:',
+        formData.message,
+      ].join('\n');
 
-        // Reset success banner after 5s
-        setTimeout(() => setIsSuccess(false), 5000);
-      } catch (err) {
-        setIsSubmitting(false);
-        setErrorMsg('Something went wrong. Please try again.');
-      }
-    }, 1200);
+      window.location.href = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+
+      // Reset success banner after 5s
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch (err) {
+      setIsSubmitting(false);
+      setErrorMsg('Something went wrong. Please try again.');
+    }
   };
 
   return (
@@ -164,7 +174,7 @@ export function ContactForm() {
                 className="flex items-center justify-center gap-2 text-green-400 text-xs font-mono border border-green-500/20 bg-green-950/20 px-4 py-3 rounded-lg w-full text-center"
               >
                 <CheckCircle size={14} className="text-green-400" />
-                Message deployed successfully! I&apos;ll be in touch soon.
+                Email draft opened. Please press Send in your mail app.
               </motion.div>
             )}
           </AnimatePresence>
