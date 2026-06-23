@@ -411,6 +411,57 @@ export default function Page() {
           </div>
         </section>
         
+        {/* EXPERIENCE SECTION */}
+        <section id="experience" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 scroll-mt-20">
+          <div className="text-center md:text-left mb-16">
+            <div className="flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-3">
+              <Building2 size={14} />
+              <span>Professional Journey</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-sans font-black text-white tracking-tight mt-2 uppercase">
+              Work & Research
+            </h2>
+          </div>
+
+          <div className="space-y-6 max-w-4xl">
+            {experiences.map((exp, idx) => (
+              <motion.div
+                key={exp.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="relative rounded-xl border border-white/10 bg-white/[0.01] hover:border-orange-500/30 hover:bg-white/[0.02] transition-all p-6 md:p-8 group"
+              >
+                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-500/20 to-transparent" />
+                
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                      {exp.role}
+                    </h3>
+                    <p className="text-sm text-orange-400/80 font-mono mt-1">
+                      {exp.organization}
+                    </p>
+                  </div>
+                  <span className="text-xs font-mono text-gray-500 whitespace-nowrap pl-4">
+                    {exp.period}
+                  </span>
+                </div>
+
+                <ul className="space-y-2.5">
+                  {exp.bullets.map((bullet, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-gray-300 leading-relaxed">
+                      <span className="text-orange-400/60 flex-shrink-0 mt-1.5">▸</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* PROJECTS SECTION */}
         <section id="projects" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
           <div className="text-center md:text-left mb-12">
@@ -590,57 +641,6 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* EXPERIENCE SECTION */}
-        <section id="experience" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 scroll-mt-20">
-          <div className="text-center md:text-left mb-16">
-            <div className="flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-3">
-              <Building2 size={14} />
-              <span>Professional Journey</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-sans font-black text-white tracking-tight mt-2 uppercase">
-              Work & Research
-            </h2>
-          </div>
-
-          <div className="space-y-6 max-w-4xl">
-            {experiences.map((exp, idx) => (
-              <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="relative rounded-xl border border-white/10 bg-white/[0.01] hover:border-orange-500/30 hover:bg-white/[0.02] transition-all p-6 md:p-8 group"
-              >
-                <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-500/20 to-transparent" />
-                
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <div>
-                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
-                      {exp.role}
-                    </h3>
-                    <p className="text-sm text-orange-400/80 font-mono mt-1">
-                      {exp.organization}
-                    </p>
-                  </div>
-                  <span className="text-xs font-mono text-gray-500 whitespace-nowrap pl-4">
-                    {exp.period}
-                  </span>
-                </div>
-
-                <ul className="space-y-2.5">
-                  {exp.bullets.map((bullet, i) => (
-                    <li key={i} className="flex gap-3 text-sm text-gray-300 leading-relaxed">
-                      <span className="text-orange-400/60 flex-shrink-0 mt-1.5">▸</span>
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
             ))}
           </div>
         </section>
@@ -903,7 +903,7 @@ export default function Page() {
                     </div>
                   </div>
                   <a 
-                    href="/resume.pdf"
+                    href="/images/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-1 px-3 text-[10px] font-mono rounded bg-white/5 border border-white/10 text-gray-400 hover:text-white transition-all hover:bg-orange-600/10"
