@@ -37,15 +37,14 @@ interface Experience {
 const DEFAULT_PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'CareMind: Clinical QA System Using MIMIC-IV + LLaMA',
-    subtitle: 'Clinical RAG Question Answering System',
+    title: 'CareMind: Agentic Clinical RAG Assistant',
+    subtitle: 'May - Jun 2026',
     description: [
-      'Built a Retrieval-Augmented Generation (RAG) system integrating structured and unstructured MIMIC-IV clinical data with a LLaMA-based question-answering model to answer patient-specific clinical queries.',
-      'Developed a semantic retrieval pipeline using BioBERT embeddings, Pinecone, and LangChain to ground responses in relevant patient records and clinical documentation.',
-      'Implemented hallucination detection and response validation using FacebookAI/roberta-large-mnli, reducing unsupported clinical statements by approximately 15%.',
-      'Evaluated system performance using clinical relevance, faithfulness, and hallucination metrics to assess response quality and reliability.'
+      'Built an agentic RAG system using LangGraph for multi-step query routing across document retrieval, report comparison, and medical education workflows over synthetic medical PDFs.',
+      'Engineered an MCP tool server for document search, report comparison, and timeline extraction; integrated tool-call results into cited answers using NVIDIA NIM embeddings and Pinecone vector search.',
+      'Deployed a React frontend with a FastAPI backend, Redis response cache, and a repeatable evaluation pipeline measuring route accuracy and citation pass rate; accessible via both web and VS Code extension.'
     ],
-    techStack: ['Python', 'PyTorch', 'LangChain', 'Pinecone', 'BioBERT', 'LLaMA', 'RAG'],
+    techStack: ['Python', 'FastAPI', 'LangGraph', 'Pinecone', 'Redis', 'NVIDIA NIM', 'MCP', 'React', 'TypeScript'],
     githubLink: 'https://github.com/shreevm/CareMind',
     likes: 245,
     views: 1104,
@@ -153,7 +152,7 @@ const SKILL_DOMAINS = [
   {
     index: "02",
     title: "Generative AI & LLM Engineering",
-    skills: ["LangChain", "LlamaIndex", "RAG", "OpenAI API", "Gemini API", "Prompt Engineering"]
+    skills: ["LangGraph", "LlamaIndex", "RAG", "OpenAI API", "Gemini API", "Prompt Engineering"]
   },
   {
     index: "03",
@@ -235,9 +234,30 @@ export default function Page() {
       }
 
       const parsedProjs: Project[] = JSON.parse(localProjsLst);
+      const migratedProjs = parsedProjs.map(project => {
+        if (project.id !== '1') {
+          return project;
+        }
+
+        const defaultCareMind = DEFAULT_PROJECTS[0];
+        return {
+          ...project,
+          title: defaultCareMind.title,
+          subtitle: defaultCareMind.subtitle,
+          description: defaultCareMind.description,
+          techStack: defaultCareMind.techStack,
+          githubLink: defaultCareMind.githubLink,
+          featured: defaultCareMind.featured
+        };
+      });
+
+      if (JSON.stringify(migratedProjs) !== JSON.stringify(parsedProjs)) {
+        localStorage.setItem('sv_projects', JSON.stringify(migratedProjs));
+      }
+
       const parsedExps: Experience[] = JSON.parse(localExpsLst);
 
-      setProjects(parsedProjs);
+      setProjects(migratedProjs);
       setExperiences(parsedExps);
     }
   };
