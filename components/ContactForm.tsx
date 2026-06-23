@@ -78,13 +78,6 @@ export function ContactForm() {
       {/* Decorative linear orange lighting path */}
       <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-500/40 to-transparent" />
 
-      <h3 className="text-2xl font-sans font-bold text-white tracking-tight text-center md:text-left mb-2">
-        Let&apos;s Construct Something Exceptional
-      </h3>
-      <p className="text-sm text-gray-400 font-sans tracking-wide text-center md:text-left mb-8">
-        Have questions about 3D neural rendering pipelines, AI diagnostics, or looking to collaborate? Drop a message directly.
-      </p>
-
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name and Email side-by-side on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -190,7 +183,7 @@ export function ContactForm() {
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
             ) : (
               <>
-                <span>Transmit Message</span>
+                <span>Send Email</span>
                 <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
               </>
             )}

@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 import { VideoIntro } from '@/components/VideoIntro';
 import { ThreeLayer } from '@/components/ThreeLayer';
-import { ContactForm } from '@/components/ContactForm';
 import { AdminDashboard } from '@/components/AdminDashboard';
 
 // Structures
@@ -808,10 +807,10 @@ export default function Page() {
 
         {/* GET IN TOUCH SECTION */}
         <section id="contact" className="py-24 px-6 max-w-7xl mx-auto border-t border-white/5 scroll-mt-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="max-w-3xl mx-auto">
             
-            {/* Left Column: Get In Touch specified messaging & visual placeholders */}
-            <div className="lg:col-span-5 space-y-8">
+            {/* Get In Touch specified messaging & visual placeholders */}
+            <div className="space-y-8">
               <div>
                 <div className="flex items-center gap-2 text-xs font-mono text-orange-400 uppercase tracking-widest mb-3">
                   <Mail size={14} />
@@ -932,11 +931,6 @@ export default function Page() {
                   </a>
                 </div>
               </div>
-            </div>
-
-            {/* Right Column: Custom Inline Direct Message Form to keep localStorage flows active */}
-            <div className="lg:col-span-7">
-              <ContactForm />
             </div>
 
           </div>
