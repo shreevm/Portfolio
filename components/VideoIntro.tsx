@@ -281,15 +281,7 @@ export function VideoIntro({ onScrollNext }: VideoIntroProps) {
       {/* Main Landing Content Frame */}
       <div className="relative z-20 flex flex-col items-center text-center justify-center flex-grow max-w-4xl pt-12 md:pt-0">
         
-        {/* uppercase tags */}
-        <motion.div
-          initial={{ opacity: 0, letterSpacing: '0.1em' }}
-          animate={{ opacity: 1, letterSpacing: '0.35em' }}
-          transition={{ duration: 1.5, delay: 0.2, ease: 'easeOut' }}
-          className="text-xs md:text-sm text-orange-400/90 font-mono uppercase font-semibold mb-4 tracking-[0.35em]"
-        >
-          AI RESEARCHER • MACHINE LEARNING ENGINEER
-        </motion.div>
+
 
         {/* Large Bold Stacked First and Last Name */}
         <h1 className="flex flex-col items-center">
@@ -310,6 +302,15 @@ export function VideoIntro({ onScrollNext }: VideoIntroProps) {
             MANGAI V
           </motion.span>
         </h1>
+                {/* uppercase tags */}
+        <motion.div
+          initial={{ opacity: 0, letterSpacing: '0.1em' }}
+          animate={{ opacity: 1, letterSpacing: '0.35em' }}
+          transition={{ duration: 1.5, delay: 0.2, ease: 'easeOut' }}
+          className="text-xs md:text-sm text-orange-400/90 font-mono uppercase font-semibold mb-4 tracking-[0.35em]"
+        >
+          AI/ML RESEARCHER • MACHINE LEARNING ENGINEER
+        </motion.div>
 
         {/* Short Premium description */}
         <motion.p
@@ -318,7 +319,7 @@ export function VideoIntro({ onScrollNext }: VideoIntroProps) {
           transition={{ duration: 1.2, delay: 0.8, ease: 'easeOut' }}
           className="text-sm md:text-lg text-gray-300 font-sans mt-8 max-w-xl font-light tracking-wide leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
         >
-          MS AI Systems @ University of Florida (GPA 3.90). I build full-stack AI systems — RAG pipelines, video hallucination benchmarks, 3D reconstruction, and multimodal models. Previously at Ford Motor Company and AGIS Inc. Open to full-stack AI engineering and data science roles.
+          MS AI Systems @ University of Florida (GPA 3.90). I build full-stack AI systems, RAG pipelines, video hallucination benchmarks, 3D reconstruction, and multimodal models. Previously at Ford Motor Company and AGIS Inc. Open to full-stack AI engineering, data science and Software Engineering roles.
         </motion.p>
 
         {/* High GPA & Affiliation badge */}
