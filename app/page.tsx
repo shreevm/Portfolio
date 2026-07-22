@@ -40,11 +40,11 @@ const DEFAULT_PROJECTS: Project[] = [
     subtitle: 'May - Jun 2026',
     description: [
       'Built an agentic RAG system using LangGraph for multi-step query routing across document retrieval, report comparison, and medical education workflows over synthetic medical PDFs.',
-      'Engineered an MCP tool server for document search, report comparison, and timeline extraction; integrated tool-call results into cited answers using NVIDIA NIM embeddings and Pinecone vector search.',
+      'Engineered an MCP tool server for document search, report comparison, and timeline extraction; integrated tool-call results into cited answers using NVIDIA NIM embeddings and Supabase vector search.',
       'Deployed a React frontend with a FastAPI backend, Redis response cache, and a repeatable evaluation pipeline measuring route accuracy and citation pass rate; accessible via both web and VS Code extension.'
     ],
-    techStack: ['Python', 'FastAPI', 'LangGraph', 'Pinecone', 'Redis', 'NVIDIA NIM', 'MCP', 'React', 'TypeScript'],
-    githubLink: 'https://github.com/shreevm/CareMind',
+    techStack: ['Python', 'FastAPI', 'LangGraph', 'Supabase', 'Redis', 'NVIDIA NIM', 'MCP', 'React', 'TypeScript'],
+    githubLink: 'https://github.com/shreevm/CareMind/tree/new_CareMind',
     likes: 245,
     views: 1104,
     featured: true
