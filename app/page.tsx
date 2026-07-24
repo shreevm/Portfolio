@@ -185,6 +185,8 @@ const SKILL_DOMAINS = [
   }
 ];
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Page() {
   const [mounted, setMounted] = useState(false);
   const [showAdminConsole, setShowAdminConsole] = useState(false);
@@ -922,7 +924,7 @@ export default function Page() {
                     </div>
                   </div>
                   <a 
-                    href="/images/resume.pdf"
+                    href={`${basePath}/images/resume.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-1 px-3 text-[10px] font-mono rounded bg-white/5 border border-white/10 text-gray-400 hover:text-white transition-all hover:bg-orange-600/10"

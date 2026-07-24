@@ -9,6 +9,8 @@ interface VideoIntroProps {
   onScrollNext: () => void;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export function VideoIntro({ onScrollNext }: VideoIntroProps) {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
@@ -202,7 +204,7 @@ export function VideoIntro({ onScrollNext }: VideoIntroProps) {
           className="relative w-full h-full"
         >
           <Image
-            src="/images/grace_hopper_2025.jpg"
+            src={`${basePath}/images/grace_hopper_2025.jpg`}
             alt="Shree Varaa"
             fill
             className="object-cover object-center"
