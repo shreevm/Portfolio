@@ -1,72 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Shree Varaa Mangai V
 
-# Run and deploy your AI Studio app
+AI/ML Researcher and Machine Learning Engineer focused on building reliable, full-stack AI systems.
 
-This contains everything you need to run your app locally.
+I am pursuing a Master of Science in Artificial Intelligence Systems at the University of Florida, where my work spans generative AI evaluation, clinical RAG systems, computer vision, multimodal learning, and neural reconstruction. I enjoy turning research ideas into usable products, especially systems that are practical, scalable, and trustworthy.
 
-View your app in AI Studio: https://ai.studio/apps/2978cf23-bcd5-467f-90bf-080c079e07ab
+## About Me
 
-## Run Locally
+My interest in technology started with building software and grew into a deeper curiosity about how intelligent systems behave, fail, and improve. During my undergraduate studies in Information Technology, I worked on web applications, analytics pipelines, and applied machine learning projects. That foundation led me toward AI systems, where I now focus on the intersection of machine learning research and production-ready engineering.
 
-**Prerequisites:**  Node.js
+I have worked on clinical retrieval-augmented generation, hallucination evaluation for text-to-video models, multimodal command recognition, medical image super-resolution, and 3D reconstruction pipelines using Gaussian Splatting. I am especially interested in AI systems that are useful in high-impact domains and evaluated with care.
 
+Currently, I am open to opportunities in AI/ML Engineering, Applied AI, Computer Vision, NLP, Data Science, and Software Engineering.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Featured Work
 
-## Build and Deploy
+- **CareMind: Agentic Clinical RAG Assistant**  
+  Built an agentic RAG system using LangGraph, FastAPI, Supabase vector search, NVIDIA NIM embeddings, Redis caching, and a React frontend for clinical document search, report comparison, and cited medical education workflows.
 
-**Recommended Node version:** 18+ (Node 20 recommended).
+- **Multi-Image Super Resolution for Prostate MRI**  
+  Developed a medical imaging super-resolution pipeline using CNN, SRGAN, and diffusion-based approaches, with emphasis on anatomical consistency and clinically meaningful evaluation.
 
-1. Install dependencies:
-   `npm install`
-2. Build the app:
-   `npm run build`
+- **Multimodal Spoken Command Recognition**  
+  Built an audio-text fusion model using Wav2Vec2, BERT, cross-attention, Transformer decoders, and Pinecone retrieval to improve spoken command classification.
 
-- If you want to run a production server locally:
-  `npm run start`
+- **COGNITO-MAP**  
+  Created an automated question classification and analytics pipeline using Flask, React, MongoDB, Pinecone, Chart.js, and Gemini API.
 
-- If you use the existing `deploy` script it runs `next build && next export`.
-  - Note: `next export` creates a static export and is NOT compatible with many Next.js "app"-directory features (server components, middleware, `next/image`, API routes).
-  - If your project uses the `app/` directory or server-side features, `next export` will fail. Instead deploy to a platform that supports Next.js server runtime (Vercel, Render, Fly, etc.), or remove server features to make a static export possible.
+## Technical Skills
 
-## Deploying to Vercel (recommended)
+**AI / ML:** PyTorch, TensorFlow, Keras, Hugging Face Transformers, Scikit-learn, CUDA  
+**Generative AI:** LangGraph, LlamaIndex, RAG, OpenAI API, Gemini API, prompt engineering  
+**Computer Vision:** OpenCV, Gaussian Splatting, COLMAP, diffusion models, neural rendering  
+**Backend / Frontend:** FastAPI, Flask, Node.js, React, React Native, TypeScript, JavaScript  
+**Data / MLOps:** PostgreSQL, MongoDB, Pinecone, Firebase, Docker, Git, CI/CD, Azure, Linux  
 
-1. Push your repo to GitHub.
-2. Import the repo in Vercel. Vercel will run `npm run build` and serve the app using the server runtime — no `next export` required.
-3. Add environment variables (e.g., `GEMINI_API_KEY`) in the Vercel dashboard.
+## Portfolio
 
-Note: I added a GitHub Actions workflow at `.github/workflows/deploy-vercel.yml` that can deploy to Vercel when you add the following repository secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID`.
+Live site: https://shreevm.github.io/Portfolio/
 
-## Automatic deploy via GitHub Actions -> GitHub Pages
+## Contact
 
-If you'd like automatic deploys from the `main` branch to GitHub Pages, I added a GitHub Actions workflow at [.github/workflows/deploy-gh-pages.yml](.github/workflows/deploy-gh-pages.yml#L1). It will:
-
-- Run on push to `main`.
-- Install dependencies, run `npm run build` and `npm run export`.
-- Publish the generated `out/` directory to the `gh-pages` branch using the built-in `GITHUB_TOKEN`.
-
-Notes:
-- This uses `next export` to produce a static site in `out/`. If your app uses server-only features, the export may fail — in that case use Vercel or another server-capable host instead.
-- After you push these files to GitHub, Actions will run automatically and publish to `gh-pages`.
-
-
-## Common deployment issues & how to fix them
-
-- Build fails during `next export`: you are likely using the `app/` directory or server-only features. Remove `next export` from your deploy pipeline or switch to a server-capable host.
-- Missing env vars in the deployment environment causes runtime errors — set `GEMINI_API_KEY` in your host's env settings.
-- Node version mismatch: ensure the host uses Node 18+ (Node 20 recommended) to match dev dependencies.
-
-## Quick troubleshooting steps
-
-1. Run locally: `npm install && npm run build` and read the build output for explicit errors.
-2. If `next export` errors, try removing it and run `npm run build` then `npm run start` on a server or use Vercel.
-3. Share the `npm run build` error output if you want me to diagnose the exact failure.
-
----
-Updated to include build/deploy guidance and common causes for failed deployments.
+- Email: shreevaraamangai@gmail.com
+- LinkedIn: https://linkedin.com/in/shreevaraamangaiv
+- GitHub: https://github.com/shreevm
+- Medium: https://medium.com/@shreevaraamangai
