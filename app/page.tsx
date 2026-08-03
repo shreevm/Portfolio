@@ -41,9 +41,9 @@ const DEFAULT_PROJECTS: Project[] = [
     description: [
       'Built an agentic RAG system using LangGraph for multi-step query routing across document retrieval, report comparison, and medical education workflows over synthetic medical PDFs.',
       'Engineered an MCP tool server for document search, report comparison, and timeline extraction; integrated tool-call results into cited answers using NVIDIA NIM embeddings and Supabase vector search.',
-      'Deployed a React frontend with a FastAPI backend, Redis response cache, and a repeatable evaluation pipeline measuring route accuracy and citation pass rate; accessible via both web and VS Code extension.'
+      'Deployed a Next.js frontend with a FastAPI backend, Redis response cache, and a repeatable evaluation pipeline measuring route accuracy and citation pass rate.'
     ],
-    techStack: ['Python', 'FastAPI', 'LangGraph', 'Supabase', 'Redis', 'NVIDIA NIM', 'MCP', 'React', 'TypeScript'],
+    techStack: ['Python', 'FastAPI', 'LangGraph', 'Supabase', 'Redis', 'NVIDIA NIM', 'MCP', 'Next.js', 'TypeScript'],
     githubLink: 'https://github.com/shreevm/CareMind/tree/new_CareMind',
     likes: 245,
     views: 1104,
@@ -135,7 +135,7 @@ const DEFAULT_EXPERIENCES: Experience[] = [
     organization: 'Spacescan Ltd',
     period: 'SEPT 2022 – JAN 2023',
     bullets: [
-      'Built and maintained responsive web interfaces in React.js, integrating REST APIs documented with Swagger to enable seamless frontend-backend communication over PostgreSQL databases.',
+      'Built and maintained responsive web interfaces in Next.js, integrating REST APIs documented with Swagger to enable seamless frontend-backend communication over PostgreSQL databases.',
       'Developed reusable, scalable UI components with robust state management patterns, reducing code duplication and improving long-term maintainability of the application.',
       'Contributed to the React Native mobile app, implementing new features and participating in frontend architecture discussions to ensure consistency across web and mobile platforms.'
     ]
@@ -166,7 +166,7 @@ const SKILL_DOMAINS = [
   {
     index: "05",
     title: "Backend & Frontend",
-    skills: ["FastAPI", "Flask", "Node.js", "React.js", "React Native", "REST APIs"]
+    skills: ["FastAPI", "Flask", "Node.js", "Next.js", "React.js", "React Native", "REST APIs"]
   },
   {
     index: "06",
