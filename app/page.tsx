@@ -881,7 +881,7 @@ export default function Page() {
                       <p className="text-[10px] font-mono text-gray-500 uppercase">Professional Networks</p>
                       <div className="flex items-center gap-2 mt-0.5">
                         <a 
-                          href="https://linkedin.com/in/shreevaraamangaiv" 
+                          href="https://linkedin.com/in/shreevaraamangai" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-xs font-mono text-orange-400 hover:underline"
