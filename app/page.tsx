@@ -91,6 +91,20 @@ const DEFAULT_PROJECTS: Project[] = [
     githubLink: 'https://github.com/shreevm/COGNITO-MAP',
     likes: 199,
     views: 902
+  },
+  {
+    id: '5',
+    title: 'WaitWhat?: Emotion-Aware Video Learning Assistant',
+    subtitle: 'Confusion Detection & AI Clarification for Educational Videos',
+    description: [
+      'Built an AI-driven video learning assistant that detects moments of confusion from webcam facial cues while users watch educational videos.',
+      'Used OpenCV and a ViT face-expression transformer to monitor emotional signals, log confusion timestamps, and trigger contextual help at the right moment.',
+      'Integrated Whisper transcription, BART summarization, YouTube/local video support, and an OpenAI-powered question-answer engine inside a Gradio interface for on-demand clarifications.'
+    ],
+    techStack: ['Python', 'Gradio', 'OpenCV', 'PyTorch', 'TensorFlow', 'Transformers', 'Whisper', 'BART', 'OpenAI API', 'yt-dlp', 'MoviePy', 'YouTube API'],
+    githubLink: 'https://github.com/vai-vj/WaitWhat',
+    likes: 167,
+    views: 744
   }
 ];
 
@@ -235,30 +249,36 @@ export default function Page() {
       }
 
       const parsedProjs: Project[] = JSON.parse(localProjsLst);
+      const defaultProjectsById = new Map(DEFAULT_PROJECTS.map(project => [project.id, project]));
+      const lockedDefaultProjectIds = new Set(['1', '5']);
       const migratedProjs = parsedProjs.map(project => {
-        if (project.id !== '1') {
+        const defaultProject = defaultProjectsById.get(project.id);
+        if (!defaultProject || !lockedDefaultProjectIds.has(project.id)) {
           return project;
         }
 
-        const defaultCareMind = DEFAULT_PROJECTS[0];
         return {
           ...project,
-          title: defaultCareMind.title,
-          subtitle: defaultCareMind.subtitle,
-          description: defaultCareMind.description,
-          techStack: defaultCareMind.techStack,
-          githubLink: defaultCareMind.githubLink,
-          featured: defaultCareMind.featured
+          title: defaultProject.title,
+          subtitle: defaultProject.subtitle,
+          description: defaultProject.description,
+          techStack: defaultProject.techStack,
+          githubLink: defaultProject.githubLink,
+          featured: defaultProject.featured
         };
       });
+      const missingDefaultProjects = DEFAULT_PROJECTS.filter(
+        defaultProject => !migratedProjs.some(project => project.id === defaultProject.id)
+      );
+      const resolvedProjs = [...migratedProjs, ...missingDefaultProjects];
 
-      if (JSON.stringify(migratedProjs) !== JSON.stringify(parsedProjs)) {
-        localStorage.setItem('sv_projects', JSON.stringify(migratedProjs));
+      if (JSON.stringify(resolvedProjs) !== JSON.stringify(parsedProjs)) {
+        localStorage.setItem('sv_projects', JSON.stringify(resolvedProjs));
       }
 
       const parsedExps: Experience[] = JSON.parse(localExpsLst);
 
-      setProjects(migratedProjs);
+      setProjects(resolvedProjs);
       setExperiences(parsedExps);
     }
   };
