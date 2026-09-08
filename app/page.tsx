@@ -37,7 +37,7 @@ const DEFAULT_PROJECTS: Project[] = [
   {
     id: '1',
     title: 'CareMind: Agentic Clinical RAG Assistant',
-    subtitle: 'May - Jun 2026',
+    subtitle: 'Aug - Sept 2026',
     description: [
       'Built an agentic RAG system using LangGraph for multi-step query routing across document retrieval, report comparison, and medical education workflows over synthetic medical PDFs.',
       'Engineered an MCP tool server for document search, report comparison, and timeline extraction; integrated tool-call results into cited answers using NVIDIA NIM embeddings and Supabase vector search.',
