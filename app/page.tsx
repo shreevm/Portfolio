@@ -966,7 +966,7 @@ export default function Page() {
             (Always curious. Always building. Open to what&apos;s next)
           </p>
           <p className="mt-2 text-[10px] text-orange-500/40">
-            © 2026 Shree Varaa Mangai V • Gainesville, Florida
+            © 2026 Shree Varaa Mangai V 
           </p>
         </footer>
 
