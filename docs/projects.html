@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects | Shree Varaa Mangai V</title>
+<meta name="description" content="Project contributions, evaluation approaches, and source code for CareMind, Cognito-Map, MRI super-resolution, and multimodal applications.">
+<script src="theme.js">
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<div class="wrap header">
+<a class="brand" href="index.html">Shree Varaa Mangai V<small>AI &amp; Software Engineering</small>
+</a>
+<div class="header-actions">
+<nav aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="projects.html" aria-current="page">Projects</a>
+<a href="research.html">Research</a>
+<a href="experience.html">Experience</a>
+<a href="about.html">About</a>
+</nav>
+<button class="theme-toggle" type="button" hidden>Dark mode</button>
+</div>
+</div>
+</header>
+<main id="main" class="wrap">
+<p class="eyebrow">Projects</p>
+<h1>What I built, and how I evaluated it.</h1>
+<p class="intro">Selected work across applied AI, software engineering, computer vision, and multimodal learning.</p>
+<section class="section" id="caremind">
+<article class="row">
+<div class="meta">
+<strong>Clinical document QA</strong>Ongoing personal project</div>
+<div>
+<h3>CareMind <span class="status">In progress</span>
+</h3>
+<p>
+<strong>Problem:</strong> Answering questions across medical documents requires choosing the right workflow and retrieving supporting evidence.</p>
+<p>
+<strong>My work:</strong> Built LangGraph routing for retrieval, report comparison, and medical education. Implemented MCP tools for search, comparison, and timeline extraction; connected NVIDIA NIM embeddings and Supabase vector search to cited answers.</p>
+<p>Integrated a Next.js frontend, FastAPI backend, and Redis response cache. Built a repeatable evaluation pipeline for route accuracy and citation pass rate.</p>
+<p>
+<strong>Scope:</strong> Uses synthetic medical PDFs. Evaluation is ongoing; no clinical deployment or patient outcome claim.</p>
+<p class="stack">Python · TypeScript · Next.js · FastAPI · LangGraph · MCP · Supabase · Redis</p>
+<a href="https://github.com/shreevm/CareMind/tree/new_CareMind">View source on GitHub</a>
+</div>
+</article>
+</section>
+<section id="cognito">
+<article class="row">
+<div class="meta">
+<strong>Document processing</strong>Full-stack application</div>
+<div>
+<h3>Cognito-Map</h3>
+<p>
+<strong>Problem:</strong> Questions embedded in PDFs are difficult to extract and organize for educational analysis.</p>
+<p>
+<strong>My work:</strong> Built an ETL pipeline that extracts questions with Gemini, stores them in MongoDB, and makes them available through a Flask and React dashboard with Chart.js visualizations.</p>
+<p>
+<strong>Result:</strong> Achieved <strong>94% question extraction accuracy</strong> in project evaluation. The dashboard presents cognitive levels using Bloom’s Taxonomy.</p>
+<p class="stack">Python · Flask · React · MongoDB · Gemini API · Chart.js</p>
+<a href="https://github.com/shreevm/COGNITO-MAP">View source on GitHub</a>
+</div>
+</article>
+</section>
+<article class="row">
+<div class="meta">
+<strong>Computer vision</strong>Medical imaging</div>
+<div>
+<h3>Prostate MRI super-resolution</h3>
+<p>
+<strong>My work:</strong> Developed a multi-image pipeline for reconstructing missing or low-resolution prostate MRI slices. Compared CNN, SRGAN, and diffusion approaches.</p>
+<p>
+<strong>Evaluation:</strong> Used PSNR, SSIM, and qualitative anatomical assessment to examine the tradeoff between image sharpness and structural fidelity.</p>
+<p class="stack">PyTorch · CNNs · SRGAN · Diffusion models · OpenCV</p>
+<a href="https://github.com/shreevm/Prostate-MRI-Super-Res">View source on GitHub</a>
+</div>
+</article>
+<article class="row">
+<div class="meta">
+<strong>Multimodal learning</strong>Audio + text</div>
+<div>
+<h3>Spoken command recognition</h3>
+<p>
+<strong>My work:</strong> Combined Wav2Vec2 audio embeddings and BERT text embeddings using cross-attention and Transformer decoders. Added Pinecone retrieval to select semantically relevant text commands.</p>
+<p>
+<strong>Evaluation focus:</strong> Compared fusion strategies and investigated generalization under noisy audio conditions.</p>
+<p class="stack">PyTorch · Hugging Face · Wav2Vec2 · BERT · Pinecone</p>
+<a href="https://github.com/shreevm/Multimodal-Command-Recognition">View source on GitHub</a>
+</div>
+</article>
+<article class="row">
+<div class="meta">
+<strong>Learning assistant</strong>Hackathon project</div>
+<div>
+<h3>WaitWhat?</h3>
+<p>
+<strong>My work:</strong> Built a video learning assistant that uses facial-expression signals to flag possible confusion and record timestamps. Integrated Whisper transcription, BART summarization, and question answering in Gradio.</p>
+<p>
+<strong>Scope:</strong> Supports YouTube and local video. Facial expressions are a proxy for possible confusion, not a definitive measure of understanding.</p>
+<p class="stack">Python · OpenCV · ViT · Whisper · BART · Gradio</p>
+<a href="https://github.com/vai-vj/WaitWhat">View source on GitHub</a>
+</div>
+</article>
+</main>
+<footer>
+<div class="wrap footer">
+<span>Shree Varaa Mangai V · Gainesville, FL</span>
+<div>
+<a href="mailto:shreevaraamangai@gmail.com">Email</a>
+<a href="https://linkedin.com/in/shreevaraamangai">LinkedIn</a>
+<a href="https://github.com/shreevm">GitHub</a>
+<a href="resume.pdf">Resume</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
