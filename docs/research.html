@@ -7,7 +7,7 @@
 <meta name="description" content="Text-to-video hallucination research at the University of Florida: generation, annotation, TRACE, and evaluation results.">
 <script src="theme.js">
 </script>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,7 +20,7 @@
 <a href="experience.html">Experience</a>
 <a href="about.html">About</a>
 </nav>
-<button class="theme-toggle" type="button" hidden>Dark mode</button>
+<div class="nav-actions"><button class="theme-toggle" type="button" hidden>Dark mode</button></div>
 </div>
 </div>
 </header>
@@ -42,38 +42,31 @@
 <span>TRACE-L AUROC on T2V-CompBench-Wan</span>
 </div>
 </div>
-<div class="prose">
-<h2>My contribution</h2>
+<div class="project-grid research-grid"><section class="project-card research-card"><h2>My contribution</h2>
 <ul>
 <li>Ran video-generation experiments with Wan 2.1 and HunyuanVideo on NVIDIA B200 GPU clusters using benchmark prompts.</li>
 <li>Contributed to dataset development and annotation, distinguishing prompt inconsistency from physical implausibility.</li>
 <li>Worked on prompt-reconstruction signals, VLM baselines, evaluation pipelines, and error analysis for TRACE.</li>
 <li>Evaluated detection with AUROC, AUPRC, macro F1, balanced accuracy, accuracy, and MCC.</li>
 </ul>
-<h2>How TRACE works</h2>
+</section><section class="project-card research-card"><h2>How TRACE works</h2>
 <p>A frozen Qwen3-VL model receives video keyframes and the original prompt. Under teacher forcing, it scores the true prompt tokens. Token ranks provide signals about words the video may not support, which are aggregated into a video-level detection score.</p>
 <p>The method also produces a token evidence map to make potentially unsupported content easier to inspect.</p>
-<h2>Results and limits</h2>
+</section><section class="project-card research-card"><h2>Results and limits</h2>
 <div class="callout">
 <p>
 <strong>TRACE-L reached 0.738 AUROC on T2V-CompBench-Wan</strong> and led the six reported metrics on both evaluated T2V-CompBench corpora.</p>
 </div>
 <p>The 0.738 value measures detection performance on a specific research benchmark; it is not an overall accuracy rate. The 15,000+ generation total and the 4,201-pair annotated corpus describe different stages of the work.</p>
 <p>Controls using removed or shuffled frames approached chance, and detection improved with violation severity. These experiments support the role of visual evidence within the evaluated setting; they do not establish reliability across every generator or domain.</p>
-<h2>Current role</h2>
+</section><section class="project-card research-card"><h2>Current role</h2>
 <p>Volunteer Research Assistant, Department of Electrical and Computer Engineering, University of Florida. I work on vision-language and generative model evaluation on HiPerGator.</p>
-<a href="mailto:shreevaraamangai@gmail.com?subject=Question%20about%20your%20research">Contact me about the research</a>
-</div>
+<a href="mailto:shreevaraamangai@gmail.com?subject=Question%20about%20your%20research">Contact me about the research</a></section></div>
 </main>
-<footer>
-<div class="wrap footer">
-<span>Shree Varaa Mangai V · Gainesville, FL</span>
-<div>
-<a href="mailto:shreevaraamangai@gmail.com">Email</a>
-<a href="https://linkedin.com/in/shreevaraamangai">LinkedIn</a>
-<a href="https://github.com/shreevm">GitHub</a>
-<a href="resume.pdf">Resume</a>
-</div>
+<footer class="site-footer wrap">
+<div class="project-card footer-note">
+<p><em>(Always curious. Always building. Open to what's next)</em></p>
+<p class="copyright">&copy; 2026 Shree Varaa Mangai V</p>
 </div>
 </footer>
 </body>

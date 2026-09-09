@@ -7,7 +7,7 @@
 <meta name="description" content="Project contributions, evaluation approaches, and source code for CareMind, Cognito-Map, MRI super-resolution, and multimodal applications.">
 <script src="theme.js">
 </script>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,7 +20,7 @@
 <a href="experience.html">Experience</a>
 <a href="about.html">About</a>
 </nav>
-<button class="theme-toggle" type="button" hidden>Dark mode</button>
+<div class="nav-actions"><button class="theme-toggle" type="button" hidden>Dark mode</button></div>
 </div>
 </div>
 </header>
@@ -28,91 +28,71 @@
 <p class="eyebrow">Projects</p>
 <h1>What I built, and how I evaluated it.</h1>
 <p class="intro">Selected work across applied AI, software engineering, computer vision, and multimodal learning.</p>
-<section class="section" id="caremind">
-<article class="row">
-<div class="meta">
-<strong>Clinical document QA</strong>Ongoing personal project</div>
-<div>
-<h3>CareMind <span class="status">In progress</span>
-</h3>
-<p>
+<div class="project-grid section">
+<article class="project-card" id="caremind">
+<div class="project-card-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m10 11-3 3 3 3m4-6 3 3-3 3"/></svg></span><span class="project-number">01</span></div>
+<div class="meta"><strong>Clinical document QA</strong>Ongoing personal project</div>
+<h2>CareMind <span class="status">In progress</span>
+</h2>
+<p class="project-description">
 <strong>Problem:</strong> Answering questions across medical documents requires choosing the right workflow and retrieving supporting evidence.</p>
-<p>
-<strong>My work:</strong> Built LangGraph routing for retrieval, report comparison, and medical education. Implemented MCP tools for search, comparison, and timeline extraction; connected NVIDIA NIM embeddings and Supabase vector search to cited answers.</p>
-<p>Integrated a Next.js frontend, FastAPI backend, and Redis response cache. Built a repeatable evaluation pipeline for route accuracy and citation pass rate.</p>
-<p>
-<strong>Scope:</strong> Uses synthetic medical PDFs. Evaluation is ongoing; no clinical deployment or patient outcome claim.</p>
-<p class="stack">Python · TypeScript · Next.js · FastAPI · LangGraph · MCP · Supabase · Redis</p>
-<a href="https://github.com/shreevm/CareMind/tree/new_CareMind">View source on GitHub</a>
-</div>
+<div class="tech-tags"><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Supabase</span><span>Redis</span><span>NVIDIA NIM</span><span>MCP</span><span>Next.js</span><span>TypeScript</span></div>
+<details class="project-details"><summary>Explore project <span aria-hidden="true">+</span></summary><div><p>
+<strong>My work:</strong> Built LangGraph routing for retrieval, report comparison, and medical education. Implemented MCP tools for search, comparison, and timeline extraction; connected NVIDIA NIM embeddings and Supabase vector search to cited answers.</p><p>Integrated a Next.js frontend, FastAPI backend, and Redis response cache. Built a repeatable evaluation pipeline for route accuracy and citation pass rate.</p><p>
+<strong>Scope:</strong> Uses synthetic medical PDFs. Evaluation is ongoing; no clinical deployment or patient outcome claim.</p></div></details>
+<a class="project-source" href="https://github.com/shreevm/CareMind/tree/new_CareMind">View source on GitHub <span aria-hidden="true">?</span></a>
 </article>
-</section>
-<section id="cognito">
-<article class="row">
-<div class="meta">
-<strong>Document processing</strong>Full-stack application</div>
-<div>
-<h3>Cognito-Map</h3>
-<p>
+<article class="project-card" id="cognito">
+<div class="project-card-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m10 11-3 3 3 3m4-6 3 3-3 3"/></svg></span><span class="project-number">02</span></div>
+<div class="meta"><strong>Document processing</strong>Full-stack application</div>
+<h2>Cognito-Map</h2>
+<p class="project-description">
 <strong>Problem:</strong> Questions embedded in PDFs are difficult to extract and organize for educational analysis.</p>
-<p>
-<strong>My work:</strong> Built an ETL pipeline that extracts questions with Gemini, stores them in MongoDB, and makes them available through a Flask and React dashboard with Chart.js visualizations.</p>
-<p>
-<strong>Result:</strong> Compared five models for Bloom’s Taxonomy question classification on the same test set. The Sentence Transformer achieved <strong>78.94% accuracy</strong>, outperforming the strongest baseline, KNN, by <strong>10.85 percentage points</strong>.</p>
-<p class="stack">Python · Flask · React · MongoDB · Gemini API · Chart.js</p>
-<a href="https://github.com/shreevm/COGNITO-MAP">View source on GitHub</a>
-</div>
+<div class="tech-tags"><span>Flask</span><span>React.js</span><span>MongoDB</span><span>Pinecone</span><span>Chart.js</span><span>TypeScript</span><span>Gemini API</span></div>
+<details class="project-details"><summary>Explore project <span aria-hidden="true">+</span></summary><div><p>
+<strong>My work:</strong> Built an ETL pipeline with 94% PDF question extraction accuracy using Gemini, stores them in MongoDB, and makes them available through a Flask and React dashboard with Chart.js visualizations.</p><p>
+<strong>Result:</strong> Compared five models for Bloom’s Taxonomy question classification on the same test set. The Sentence Transformer achieved <strong>78.94% accuracy</strong>, outperforming the strongest baseline, KNN, by <strong>10.85 percentage points</strong>.</p></div></details>
+<a class="project-source" href="https://github.com/shreevm/COGNITO-MAP">View source on GitHub <span aria-hidden="true">?</span></a>
 </article>
-</section>
-<article class="row">
-<div class="meta">
-<strong>Computer vision</strong>Medical imaging</div>
-<div>
-<h3>Prostate MRI super-resolution</h3>
-<p>
+<article class="project-card" id="mri">
+<div class="project-card-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m10 11-3 3 3 3m4-6 3 3-3 3"/></svg></span><span class="project-number">03</span></div>
+<div class="meta"><strong>Computer vision</strong>Medical imaging</div>
+<h2>Prostate MRI super-resolution</h2>
+<p class="project-description">
 <strong>My work:</strong> Developed a multi-image pipeline for reconstructing missing or low-resolution prostate MRI slices. Compared CNN, SRGAN, and diffusion approaches.</p>
-<p>
-<strong>Evaluation:</strong> Used PSNR, SSIM, and qualitative anatomical assessment to examine the tradeoff between image sharpness and structural fidelity.</p>
-<p class="stack">PyTorch · CNNs · SRGAN · Diffusion models · OpenCV</p>
-<a href="https://github.com/shreevm/Prostate-MRI-Super-Res">View source on GitHub</a>
-</div>
+<div class="tech-tags"><span>PyTorch</span><span>CNN</span><span>SRGAN</span><span>Diffusion Models</span><span>OpenCV</span><span>NumPy</span></div>
+<details class="project-details"><summary>Explore project <span aria-hidden="true">+</span></summary><div><p>
+<strong>Evaluation:</strong> Used PSNR, SSIM, and qualitative anatomical assessment to examine the tradeoff between image sharpness and structural fidelity.</p></div></details>
+<a class="project-source" href="https://github.com/shreevm/Prostate-MRI-Super-Res">View source on GitHub <span aria-hidden="true">?</span></a>
 </article>
-<article class="row">
-<div class="meta">
-<strong>Multimodal learning</strong>Audio + text</div>
-<div>
-<h3>Spoken command recognition</h3>
-<p>
+<article class="project-card" id="spoken-commands">
+<div class="project-card-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m10 11-3 3 3 3m4-6 3 3-3 3"/></svg></span><span class="project-number">04</span></div>
+<div class="meta"><strong>Multimodal learning</strong>Audio + text</div>
+<h2>Spoken command recognition</h2>
+<p class="project-description">
 <strong>My work:</strong> Combined Wav2Vec2 audio embeddings and BERT text embeddings using cross-attention and Transformer decoders. Added Pinecone retrieval to select semantically relevant text commands.</p>
-<p>
-<strong>Evaluation focus:</strong> Compared fusion strategies and investigated generalization under noisy audio conditions.</p>
-<p class="stack">PyTorch · Hugging Face · Wav2Vec2 · BERT · Pinecone</p>
-<a href="https://github.com/shreevm/Multimodal-Command-Recognition">View source on GitHub</a>
-</div>
+<div class="tech-tags"><span>PyTorch</span><span>Hugging Face</span><span>Wav2Vec2</span><span>BERT</span><span>Pinecone</span><span>Scikit-learn</span></div>
+<details class="project-details"><summary>Explore project <span aria-hidden="true">+</span></summary><div><p>
+<strong>Evaluation focus:</strong> Compared fusion strategies and investigated generalization under noisy audio conditions.</p></div></details>
+<a class="project-source" href="https://github.com/shreevm/Multimodal-Command-Recognition">View source on GitHub <span aria-hidden="true">?</span></a>
 </article>
-<article class="row">
-<div class="meta">
-<strong>Learning assistant</strong>Hackathon project</div>
-<div>
-<h3>WaitWhat?</h3>
-<p>
-<strong>My work:</strong> Built a video learning assistant that uses facial-expression signals to flag possible confusion and record timestamps. Integrated Whisper transcription, BART summarization, and question answering in Gradio.</p>
-<p>
-<strong>Scope:</strong> Supports YouTube and local video. Facial expressions are a proxy for possible confusion, not a definitive measure of understanding.</p>
-<p class="stack">Python · OpenCV · ViT · Whisper · BART · Gradio</p>
-<a href="https://github.com/vai-vj/WaitWhat">View source on GitHub</a>
-</div>
+<article class="project-card" id="waitwhat">
+<div class="project-card-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m10 11-3 3 3 3m4-6 3 3-3 3"/></svg></span><span class="project-number">05</span></div>
+<div class="meta"><strong>Learning assistant</strong>Hackathon project</div>
+<h2>WaitWhat?</h2>
+<p class="project-description">
+<strong>My work:</strong> Built a video learning assistant that uses facial-expression signals to flag possible confusion and record timestamps. Integrated Whisper transcription, BART summarization, and OpenAI-powered question answering in Gradio.</p>
+<div class="tech-tags"><span>Python</span><span>Gradio</span><span>OpenCV</span><span>PyTorch</span><span>TensorFlow</span><span>Transformers</span><span>Whisper</span><span>BART</span><span>OpenAI API</span><span>yt-dlp</span><span>MoviePy</span><span>YouTube API</span></div>
+<details class="project-details"><summary>Explore project <span aria-hidden="true">+</span></summary><div><p>
+<strong>Scope:</strong> Supports YouTube and local video. Facial expressions are a proxy for possible confusion, not a definitive measure of understanding.</p></div></details>
+<a class="project-source" href="https://github.com/vai-vj/WaitWhat">View source on GitHub <span aria-hidden="true">?</span></a>
 </article>
+</div>
 </main>
-<footer>
-<div class="wrap footer">
-<span>Shree Varaa Mangai V · Gainesville, FL</span>
-<div>
-<a href="mailto:shreevaraamangai@gmail.com">Email</a>
-<a href="https://linkedin.com/in/shreevaraamangai">LinkedIn</a>
-<a href="https://github.com/shreevm">GitHub</a>
-<a href="resume.pdf">Resume</a>
-</div>
+<footer class="site-footer wrap">
+<div class="project-card footer-note">
+<p><em>(Always curious. Always building. Open to what's next)</em></p>
+<p class="copyright">&copy; 2026 Shree Varaa Mangai V</p>
 </div>
 </footer>
 </body>

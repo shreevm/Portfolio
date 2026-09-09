@@ -1,6 +1,7 @@
+
 import type {Metadata} from 'next';
 import { Space_Grotesk, JetBrains_Mono, Playfair_Display } from 'next/font/google';
-import './globals.css';
+import 'app/globals.css';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],

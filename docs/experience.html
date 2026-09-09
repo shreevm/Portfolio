@@ -7,7 +7,7 @@
 <meta name="description" content="Engineering and research contributions at the University of Florida, AGIS, Ford Motor Company, and Spacescan.">
 <script src="theme.js">
 </script>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,75 +20,25 @@
 <a href="experience.html" aria-current="page">Experience</a>
 <a href="about.html">About</a>
 </nav>
-<button class="theme-toggle" type="button" hidden>Dark mode</button>
+<div class="nav-actions"><button class="theme-toggle" type="button" hidden>Dark mode</button></div>
 </div>
 </div>
 </header>
 <main id="main" class="wrap">
 <p class="eyebrow">Experience</p>
-<h1>Engineering, research, and applied data work.</h1>
-<p class="intro">My contributions span model evaluation, 3D reconstruction, workforce analytics, and web development.</p>
-<section class="section">
-<article class="row">
-<div class="meta">
-<strong>University of Florida</strong>Current · ECE</div>
-<div>
-<h3>Volunteer Research Assistant</h3>
-<p>Deploy and benchmark vision-language and generative AI models on HiPerGator GPU clusters. Evaluate automated pipelines for detecting model hallucinations.</p>
-<p class="stack">Python · PyTorch · Vision-language models · Slurm</p>
-</div>
-</article>
-<article class="row">
-<div class="meta">
-<strong>UF IPPD / AGIS Inc.</strong>Aug 2025 – Apr 2026</div>
-<div>
-<h3>Machine Learning Engineering Co-op</h3>
-<p>Built a pipeline from multi-view images and video to reconstructed 3D assets and Unity visualization. Compared 3D and 2D Gaussian Splatting, selecting 2DGS for exportable mesh quality.</p>
-<p>Worked with COLMAP/GLOMAP and GPU reconstruction workflows on NVIDIA B200 clusters.</p>
-<p class="stack">COLMAP · GLOMAP · 2DGS / 3DGS · CUDA · Unity</p>
-</div>
-</article>
-<article class="row">
-<div class="meta">
-<strong>University of Florida</strong>Sep 2025 – Apr 2026</div>
-<div>
-<h3>Machine Learning Researcher</h3>
-<p>Designed video-generation experiments with Wan 2.1 and HunyuanVideo, developed hallucination categories, and benchmarked Qwen3-VL detection using classification and ranking metrics.</p>
-<p>
-<a href="research.html">See research contributions and results</a>
-</p>
-</div>
-</article>
-<article class="row">
-<div class="meta">
-<strong>Ford Motor Company</strong>Aug 2023 – Oct 2023</div>
-<div>
-<h3>Global People Analytics Intern</h3>
-<p>Developed Python ETL pipelines and salary-cost models using workforce data with <strong>1,000+ employee records</strong>. Improved model accuracy by a reported <strong>20%</strong> through data quality improvements, exploratory analysis, and feature engineering.</p>
-<p>Evaluated ARIMA, VAR, VECM, Lasso, and Ridge models to support workforce planning.</p>
-<p class="stack">Python · ETL · Time series · Statistical modeling</p>
-</div>
-</article>
-<article class="row">
-<div class="meta">
-<strong>Spacescan Ltd.</strong>Sep 2022 – Jan 2023</div>
-<div>
-<h3>Software Engineer Intern</h3>
-<p>Built responsive Next.js interfaces and reusable components. Integrated Swagger-documented REST APIs backed by PostgreSQL, and contributed features and architecture discussions for a React Native mobile application.</p>
-<p class="stack">Next.js · React Native · TypeScript · REST APIs · PostgreSQL</p>
-</div>
-</article>
-</section>
+<h1>AI research. Software delivery. Applied impact.</h1>
+<p class="intro">Experience at the University of Florida, AGIS, Ford, and Spacescan — from evaluating generative AI to building data pipelines and web applications.</p>
+<div class="scan-grid" aria-label="Experience at a glance">
+<div class="impact-card"><strong>AI &amp; evaluation</strong><span>Vision-language models, video hallucination research, GPU experiments</span></div>
+<div class="impact-card"><strong>3D &amp; computer vision</strong><span>Multi-view capture → Gaussian Splatting → Unity assets</span></div>
+<div class="impact-card"><strong>Software &amp; data</strong><span>Next.js, React Native, Python ETL, workforce analytics</span></div>
+</div><section class="project-grid section experience-grid" aria-label="Professional experience"><article class="project-card experience-card"><div class="project-card-top"><span class="organization-mark">UF</span><span class="project-number">01</span></div><div class="meta">
+<strong>University of Florida</strong><span class="role-date">Current · ECE</span></div><h2>Volunteer Research Assistant</h2><div class="experience-copy"><p>Benchmark vision-language and generative AI models on <strong>HiPerGator GPU clusters</strong> to evaluate automated hallucination detection.</p></div><div class="tech-tags"><span>Python</span><span>PyTorch</span><span>Vision-language models</span><span>Slurm</span></div></article><article class="project-card experience-card"><div class="project-card-top"><span class="organization-mark">AGIS</span><span class="project-number">02</span></div><div class="meta"><strong>University of Florida-IPPD | AGIS Inc</strong><span class="role-date">Aug 2025 – Apr 2026</span></div><h2>Machine Learning Engineering Co-op</h2><div class="experience-copy"><p>Built an <strong>image/video → 3D asset → Unity</strong> reconstruction pipeline. Selected 2D Gaussian Splatting for exportable mesh quality and ran GPU workflows on NVIDIA B200 clusters.</p></div><div class="tech-tags"><span>COLMAP</span><span>GLOMAP</span><span>2DGS / 3DGS</span><span>CUDA</span><span>Unity</span></div><details class="project-details"><summary>Contributions <span aria-hidden="true">+</span></summary><div><ul><li>Built an end-to-end pipeline that captures video/image streams, reconstructs them into 3D assets using 2D Gaussian Splatting (2DGS), and integrates them into Unity for real-time interactive visualization.</li><li>Designed and trained neural reconstruction models (3DGS/2DGS, COLMAP/GLOMAP) on multi-view data to generate high-fidelity meshes and point clouds; selected 2DGS for its superior exportable mesh quality over 3DGS.</li><li>Accelerated large-scale reconstruction and rendering using NVIDIA B200 GPU clusters with CUDA nightly builds, significantly improving training throughput and pipeline scalability.</li><li>Investigated real-time vs. offline processing tradeoffs to optimize computational efficiency, reducing reconstruction latency and enabling practical deployment workflows.</li></ul></div></details></article><article class="project-card experience-card"><div class="project-card-top"><span class="organization-mark">UF</span><span class="project-number">03</span></div><div class="meta"><strong>University of Florida-Trustworthy Engineered-Autonomy Lab</strong><span class="role-date">Sept 2025 – Apr 2026</span></div><h2>Machine Learning Researcher</h2><div class="experience-copy"><p>Designed <strong>video-generation and hallucination-detection experiments</strong> with Wan 2.1, HunyuanVideo, and Qwen3-VL.</p><a class="text-link" href="research.html">Research methods &amp; results ↗</a></div><div class="tech-tags"><span>Wan 2.1</span><span>HunyuanVideo</span><span>Qwen3-VL</span><span>Model evaluation</span></div><details class="project-details"><summary>Contributions <span aria-hidden="true">+</span></summary><div><ul><li>Designed and executed experiments generating videos with Wan 2.1 T2V 1.3B and HunyuanVideo from T2VCompBench and ViBe benchmark prompts, systematically quantifying semantic discrepancies between prompts and generated content.</li><li>Developed a fine-grained hallucination taxonomy identifying object omissions, attribute mismatches, spatial relationship errors, and semantic drift across video generation stages.</li><li>Benchmarked automated hallucination detection using Qwen3-VL and other VLMs on severity-level classification; evaluated using Balanced Accuracy, Macro F1, AUROC, and AUPRC.</li></ul></div></details></article><article class="project-card experience-card"><div class="project-card-top"><span class="organization-mark">Ford</span><span class="project-number">04</span></div><div class="meta"><strong>Ford Motor Company</strong><span class="role-date">Aug 2023 – Oct 2023</span></div><h2>Global People Analytics Intern</h2><div class="experience-copy"><p>Built Python ETL and salary-cost models over <strong>1,000+ employee records</strong>, with a reported <strong>20% improvement in model accuracy</strong>. Compared time-series and regression models for workforce planning.</p></div><div class="tech-tags"><span>Python</span><span>ETL</span><span>Time series</span><span>Statistical modeling</span></div><details class="project-details"><summary>Contributions <span aria-hidden="true">+</span></summary><div><ul><li>Conducted statistical analysis and forecasting on time series forecasting models such as Autoregressive Integrated Moving Average (ARIMA), Vector Autoregression (VAR), and Vector Error Correction Model (VECM) and non-time series models, such as Lasso and Ridge regression, to determine optimal female incumbency.</li><li>Developed ETL pipelines in Python to predict salary costs using workforce datasets containing 1,000+ employee records, improving model accuracy by 20% through exploratory data analysis, feature engineering, and data quality improvements.</li><li>Applied statistical techniques to support HR strategy and workforce planning initiatives.</li></ul></div></details></article><article class="project-card experience-card"><div class="project-card-top"><span class="organization-mark">S</span><span class="project-number">05</span></div><div class="meta"><strong>Spacescan Ltd</strong><span class="role-date">Sept 2022 – Jan 2023</span></div><h2>Software Engineer Intern</h2><div class="experience-copy"><p>Delivered <strong>responsive Next.js interfaces and reusable components</strong>, integrated REST APIs over PostgreSQL, and contributed React Native mobile features.</p></div><div class="tech-tags"><span>Next.js</span><span>React Native</span><span>TypeScript</span><span>REST APIs</span><span>PostgreSQL</span></div><details class="project-details"><summary>Contributions <span aria-hidden="true">+</span></summary><div><ul><li>Built and maintained responsive web interfaces in Next.js, integrating REST APIs documented with Swagger to enable seamless frontend-backend communication over PostgreSQL databases.</li><li>Developed reusable, scalable UI components with robust state management patterns, reducing code duplication and improving long-term maintainability of the application.</li><li>Contributed to the React Native mobile app, implementing new features and participating in frontend architecture discussions to ensure consistency across web and mobile platforms.</li></ul></div></details></article></section>
 </main>
-<footer>
-<div class="wrap footer">
-<span>Shree Varaa Mangai V · Gainesville, FL</span>
-<div>
-<a href="mailto:shreevaraamangai@gmail.com">Email</a>
-<a href="https://linkedin.com/in/shreevaraamangai">LinkedIn</a>
-<a href="https://github.com/shreevm">GitHub</a>
-<a href="resume.pdf">Resume</a>
-</div>
+<footer class="site-footer wrap">
+<div class="project-card footer-note">
+<p><em>(Always curious. Always building. Open to what's next)</em></p>
+<p class="copyright">&copy; 2026 Shree Varaa Mangai V</p>
 </div>
 </footer>
 </body>
