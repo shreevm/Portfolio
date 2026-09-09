@@ -73,6 +73,21 @@ font-size:14px;
 color:var(--muted);
 font-weight:400;
 margin-top:5px}
+.home-brand{font-size:24px;
+margin-bottom:28px}
+.contact-card{margin-top:44px;
+padding:24px;
+border:1px solid var(--border);
+border-radius:8px;
+max-width:775px;
+scroll-margin-top:24px}
+.contact-card ul{list-style:none;
+padding:0;
+margin:0}
+.contact-card li{padding:0;
+margin:0 0 12px;
+overflow-wrap:anywhere}
+.contact-card li:last-child{margin-bottom:0}
 nav{display:flex;
 gap:24px;
 flex-wrap:wrap}
@@ -232,22 +247,25 @@ body{font-size:11pt}
 }
 
 .header-actions {display:flex;
+width:100%;
+justify-content:space-between;
 align-items:center;
 gap:24px}
 
 .theme-toggle {font:inherit;
-font-size:14px;
-line-height:1.4;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:44px;
 min-height:44px;
-padding:9px 12px;
-border:1px solid var(--border);
-border-radius:4px;
-background:var(--background);
+padding:10px;
+border:0;
+background:transparent;
 color:var(--text);
 cursor:pointer;
 white-space:nowrap}
 
-.theme-toggle:hover {border-color:var(--link)}
+.theme-toggle:hover {color:var(--link)}
 
 .theme-toggle:focus-visible {outline:3px solid var(--link);
 outline-offset:4px}
@@ -279,4 +297,3 @@ nav {margin-top:0}
 --accent:#2c567d}
 .theme-toggle {display:none}
 }
-
