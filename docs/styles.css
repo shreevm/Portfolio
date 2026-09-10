@@ -341,8 +341,8 @@ button,input,textarea,select {font:inherit}
 .content-section {margin-top:56px}
 .home-intro-grid {display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:44px;align-items:center}
 .home-introduction h1 {font-size:clamp(36px,4.3vw,54px);max-width:620px}
-.home-introduction .home-brand {font-size:clamp(36px,4.3vw,54px);line-height:1.2;letter-spacing:-.025em;color:var(--text)}
-.home-introduction .home-brand small {letter-spacing:normal;line-height:1.7;margin-top:12px}
+.home-introduction .home-brand {font-size:clamp(38px,calc(4.3vw + 2px),56px);line-height:1.2;letter-spacing:-.025em;color:var(--text);margin-bottom:12px}
+.home-introduction .hero-role {font-size:14px;line-height:1.7;letter-spacing:normal;margin:0 0 30px;color:var(--muted)}
 .home-introduction .intro {font-size:19px}
 .home-introduction .eyebrow {font-size:12px}
 .home-brand {margin:0 0 30px;color:var(--project-accent)}
@@ -414,6 +414,9 @@ a.contact-option:hover {background:var(--project-tint);border-color:var(--projec
 @media print {.home-intro-grid,.about-overview,.skill-grid {display:block}.contact-panel,.skill-card {margin-bottom:20px}.impact-card,.stat {background:none}.project-card:hover {transform:none}}
 
 /* Consistent reading hierarchy across every page. */
+.home-hero {display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:36px}
+.home-photo {display:block;width:100%;max-width:340px;height:auto;justify-self:center;align-self:end}
+@media(max-width:740px) {.home-hero {grid-template-columns:minmax(0,1fr);gap:28px}}
 h1,h2,h3,.project-card h2,.project-card h3 {color:var(--text)}
 main p,main li {color:var(--muted)}
 main p strong,main li strong,.degree {color:var(--text)}
@@ -444,5 +447,5 @@ main p strong,main li strong,.degree {color:var(--text)}
 @media(max-width:740px) {.header-actions {gap:16px}.header nav {gap:16px}.nav-actions {gap:14px}.scan-grid {grid-template-columns:1fr}.experience-card .meta {min-height:0}.experience-grid {align-items:start}}
 @media print {.nav-actions {display:none}}
 @media(max-width:740px) {.wrap.header {padding-left:22px;padding-right:22px}}
-@media(max-width:740px) {.home-introduction .home-brand {font-size:39px}}
-@media(max-width:440px) {.home-introduction .home-brand {font-size:35px}}
+@media(max-width:740px) {.home-introduction .home-brand {font-size:41px}}
+@media(max-width:440px) {.home-introduction .home-brand {font-size:37px}}
