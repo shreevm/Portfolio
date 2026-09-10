@@ -341,7 +341,7 @@ button,input,textarea,select {font:inherit}
 .content-section {margin-top:56px}
 .home-intro-grid {display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:44px;align-items:center}
 .home-introduction h1 {font-size:clamp(36px,4.3vw,54px);max-width:620px}
-.home-introduction .home-brand {font-size:clamp(38px,calc(4.3vw + 2px),56px);line-height:1.2;letter-spacing:-.025em;color:var(--text);margin-bottom:12px}
+.home-introduction .home-brand {font-size:clamp(38px,calc(4.3vw + 2px),56px);line-height:1.2;letter-spacing:-.025em;color:var(--project-accent);margin-bottom:12px}
 .home-introduction .hero-role {font-size:14px;line-height:1.7;letter-spacing:normal;margin:0 0 30px;color:var(--muted)}
 .home-introduction .intro {font-size:19px}
 .home-introduction .eyebrow {font-size:12px}
@@ -415,7 +415,7 @@ a.contact-option:hover {background:var(--project-tint);border-color:var(--projec
 
 /* Consistent reading hierarchy across every page. */
 .home-hero {display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:36px}
-.home-photo {display:block;width:100%;max-width:340px;height:auto;justify-self:center;align-self:end}
+.home-photo {display:block;width:100%;max-width:320px;height:auto;aspect-ratio:1;object-fit:cover;object-position:center 30%;border-radius:50%;justify-self:center;align-self:center}
 @media(max-width:740px) {.home-hero {grid-template-columns:minmax(0,1fr);gap:28px}}
 h1,h2,h3,.project-card h2,.project-card h3 {color:var(--text)}
 main p,main li {color:var(--muted)}
